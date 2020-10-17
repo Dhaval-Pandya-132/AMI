@@ -1,5 +1,5 @@
 # AMI
-Create Amazon machine image using packer
+Create Amazon machine image using packer demo
 
 
 ### Index 
