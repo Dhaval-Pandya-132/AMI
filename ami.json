@@ -40,6 +40,10 @@
         {
             "type": "shell",
             "script": "apacheInstall.sh"
+        },
+        {
+            "type": "shell",
+            "script": "codeDeployInstall.sh"
         }
     ]
 }
