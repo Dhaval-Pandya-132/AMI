@@ -3,6 +3,7 @@ Create Amazon machine image using packer
 
 
 
+
 ### Index 
 
   1) [AMI Detail](#Introduction)
