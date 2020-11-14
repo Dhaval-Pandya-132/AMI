@@ -13,7 +13,7 @@ sudo useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
 
 echo "step : 5 Create tmp directory and download bin file "
 cd /tmp
-curl -O https://apache.osuosl.org/tomcat/tomcat-9/v9.0.38/bin/apache-tomcat-9.0.38.tar.gz
+curl -O https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.39/bin/apache-tomcat-9.0.39.tar.gz
 
 echo "step : 6 We will install Tomcat to the /opt/tomcat directory"
 sudo mkdir /opt/tomcat
@@ -67,6 +67,8 @@ cd -
 echo "step : 10 reload the systemd daemon so that it knows about our service file:"
 sudo systemctl daemon-reload
 sudo systemctl start tomcat
+
+sudo systemctl status tomcat
 
 echo "step : 11 Tomcat uses port 8080 to accept conventional requests"
 sudo ufw allow 8080
