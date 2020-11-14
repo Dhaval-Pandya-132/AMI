@@ -13,6 +13,7 @@ Create Amazon machine image using packer
 
 
 
+
 ## AMI Detail
 This project will create the new AMI with pre-installed Java JDK 1.8 and Apache tomcate server 9.0. 
 
