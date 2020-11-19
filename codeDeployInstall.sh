@@ -4,13 +4,11 @@
 echo "updating apt-get"
 sudo apt-get update
 
-echo "installing maven"
-sudo apt-get -y install maven
 
 echo "installing ruby"
 sudo apt-get -y install ruby
 
-echo "installing ruby"
+echo "installing wget"
 sudo apt-get -y install wget
 
 echo "cd to /home/ubuntu/"
