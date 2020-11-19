@@ -2,8 +2,11 @@
 echo "step : 1 update apt package"
 sudo apt update 
 
+echo "installing maven install and  the Java Development Kit package with apt"
+sudo apt -y install maven
+
 echo "step : 2 install the Java Development Kit package with apt:--"
-sudo apt install -y openjdk-8-jdk openjdk-8-jre
+sudo apt install -y openjdk-11-jdk openjdk-11-jre
 
 echo "step : 3  creating tomcat  group--"
 sudo groupadd tomcat
@@ -42,7 +45,7 @@ sudo sh -c "echo After=network.target >> tomcat.service"
 sudo sh -c "echo [Service] >> tomcat.service"
 sudo sh -c "echo Type=forking >> tomcat.service"
 
-sudo sh -c "echo Environment=JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64 >> tomcat.service"
+sudo sh -c "echo Environment=JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64 >> tomcat.service"
 sudo sh -c "echo Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid >> tomcat.service"
 sudo sh -c "echo Environment=CATALINA_HOME=/opt/tomcat >> tomcat.service"
 sudo sh -c "echo Environment=CATALINA_BASE=/opt/tomcat >> tomcat.service"
