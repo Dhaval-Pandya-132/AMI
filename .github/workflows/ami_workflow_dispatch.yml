@@ -1,0 +1,12 @@
+name: Build AMI Using workflow dispatch
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: sudo apt-get update
+      - run: sudo apt-get install packer
+      - run: packer build -var 'aws_access_key='${{ secrets.GHACTION_AWS_ACCESS_KEY_ID }} -var 'aws_secret_key='${{ secrets.GHACTION_AWS_SECRET_ACCESS_KEY }} -var 'prod_account_id='${{ secrets.AWS_ACCOUNT_ID }} -var-file=env.json ami.json
